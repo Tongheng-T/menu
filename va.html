@@ -27,20 +27,36 @@
             font-size: 1.5em;
             font-weight: bold;
         }
+        .navbar .menu {
+            display: flex;
+            gap: 10px;
+        }
         .navbar .menu a {
             color: #fff;
             text-decoration: none;
-            margin-left: 15px;
-            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 5px;
         }
         .navbar .menu a:hover {
-            text-decoration: underline;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .menu-toggle span {
+            height: 3px;
+            width: 25px;
+            background: #fff;
+            margin: 4px 0;
+            border-radius: 2px;
         }
         .container {
             max-width: 700px;
             margin: auto;
             background: #fff;
-            padding: 30px;
+            padding: 20px;
             border-radius: 12px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             margin-top: 20px;
@@ -80,6 +96,28 @@
             text-decoration: none;
             font-weight: bold;
         }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .navbar .menu {
+                display: none;
+                flex-direction: column;
+                background-color: #6f4e37;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                width: 200px;
+                padding: 10px;
+                border-radius: 8px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            }
+            .navbar .menu.active {
+                display: flex;
+            }
+            .menu-toggle {
+                display: flex;
+            }
+        }
     </style>
 </head>
 <body>
@@ -87,13 +125,18 @@
     <!-- Navbar -->
     <div class="navbar">
         <div class="logo">☕ Coffee Shop</div>
-        <div class="menu">
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="menu" id="menu">
             <a href="index.html">Home</a>
             <a href="#coffee">Coffee</a>
             <a href="#noncoffee">Non-Coffee</a>
             <a href="#special">Special Drinks</a>
             <a href="#addons">Add-ons</a>
-            <a href="https://www.facebook.com/YourPageLinkHere" target="_blank">Facebook Page</a>
+            <a href="https://www.facebook.com/YourPageLinkHere" target="_blank">Facebook</a>
         </div>
     </div>
 
@@ -142,6 +185,13 @@
             🌐 <a href="https://www.facebook.com/YourPageLinkHere" target="_blank">Visit our Facebook Page</a>
         </footer>
     </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            menu.classList.toggle('active');
+        }
+    </script>
 
 </body>
 </html>
