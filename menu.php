@@ -1,61 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Menu Coffee & Drinks</title>
-    <style>
-        body {
-            font-family: "Khmer OS", Arial, sans-serif;
-            background-color: #fdfaf6;
-            color: #333;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 700px;
-            margin: auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            text-align: center;
-            color: #6f4e37;
-        }
-        h2 {
-            color: #6f4e37;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 5px;
-            margin-top: 20px;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-        li {
-            padding: 8px 0;
-            border-bottom: 1px dotted #ccc;
-            display: flex;
-            justify-content: space-between;
-        }
-        .price {
-            color: #888;
-        }
-        footer {
-            text-align: center;
-            margin-top: 30px;
-            font-size: 0.9em;
-            color: #666;
-        }
-    </style>
-</head>
+<?php include 'header.php'; ?>
+
 <body>
+    <?php include 'navbar.php'; ?>
     <div class="container">
-        <h1>☕️ Coffee & Drinks Menu <a href="index.html">Home</a> <a href="va.html">Home</a></h1>
-        
+        <h1>☕️ Coffee & Drinks Menu </h1>
+
         <h2>☕️ Coffee</h2>
         <ul>
             <li>Espresso <span class="price">5,000៛</span></li>
@@ -92,10 +41,11 @@
         </ul>
 
         <footer>
-            📍 Location: [Your Address Here] <br/>
-            📞 Contact: [Your Phone Number] <br/>
+            📍 Location: [Your Address Here] <br />
+            📞 Contact: [Your Phone Number] <br />
             Page: [Facebook / Website link]
         </footer>
     </div>
 </body>
+
 </html>

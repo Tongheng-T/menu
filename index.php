@@ -1,76 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Menu Coffee & Drinks</title>
-    <style>
-        body {
-            font-family: "Khmer OS", Arial, sans-serif;
-            background-color: #fdfaf6;
-            color: #333;
-            margin: 0;
-            padding: 20px;
-        }
-        .container {
-            max-width: 900px;
-            margin: auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            text-align: center;
-            color: #6f4e37;
-            margin-bottom: 20px;
-        }
-        .menu-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-        }
-        .menu-item {
-            border: 1px solid #eee;
-            border-radius: 10px;
-            overflow: hidden;
-            background: #fff;
-            transition: transform 0.2s;
-        }
-        .menu-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        .menu-item img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-        }
-        .menu-item .content {
-            padding: 15px;
-            text-align: center;
-        }
-        .menu-item .title {
-            font-size: 1.1em;
-            color: #6f4e37;
-            margin-bottom: 8px;
-        }
-        .menu-item .price {
-            color: #888;
-            font-weight: bold;
-        }
-        footer {
-            text-align: center;
-            margin-top: 30px;
-            font-size: 0.9em;
-            color: #666;
-        }
-    </style>
-</head>
+<?php include 'header.php'; ?>
+
 <body>
+    <?php include 'navbar.php'; ?>
+
+
     <div class="container">
-        <h1>☕️ Coffee & Drinks Menu <a href="menu.html">Home</a></h1>
-        
+        <h1>☕️ Coffee & Drinks Menu </h1>
+
 
         <div class="menu-grid">
             <!-- Menu Item Example -->
@@ -126,10 +62,11 @@
         </div>
 
         <footer>
-            📍 Location: [Your Address Here] <br/>
-            📞 Contact: [Your Phone Number] <br/>
+            📍 Location: [Your Address Here] <br />
+            📞 Contact: [Your Phone Number] <br />
             Page: [Facebook / Website link]
         </footer>
     </div>
 </body>
+
 </html>
